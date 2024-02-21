@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
-const uri = "mongodb://localhost:27017/mywebstore"
+require('dotenv').config()
+
+const uri = `${process.env.URI}`
 
 const db = async () =>{
     await mongoose.connect(uri)
